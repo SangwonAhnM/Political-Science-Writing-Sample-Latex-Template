@@ -237,15 +237,15 @@
   %\raisebox{-1.25\baselineskip}[0pt][0pt]{doi:xx.xxxx/xxxxx}
   }
 }
-\cfoot{%
-  \tikz[remember picture,overlay]
-  \ifnumodd{\thepage}{%
-    \node[transform shape,rotate=90,anchor=north,yshift=-2pt,text=gray!10,font=\scriptsize] at (current page.west) 
-  }{%
-     \node[transform shape,rotate=-90,anchor=north,yshift=-2pt,text=gray!10,font=\scriptsize] at (current page.east) 
-   }
-      {\foreach \n in {1,...,10}{APSR Submission Template\hspace{1em}}};
-}
+%\cfoot{%
+%  \tikz[remember picture,overlay]
+%  \ifnumodd{\thepage}{%
+%    \node[transform shape,rotate=90,anchor=north,yshift=-2pt,text=gray!10,font=\scriptsize] at (current page.west) 
+%  }{%
+%     \node[transform shape,rotate=-90,anchor=north,yshift=-2pt,text=gray!10,font=\scriptsize] at (current page.east) 
+%   }
+%      {\foreach \n in {1,...,10}{APSR Submission Template\hspace{1em}}};
+%}
 
 %% Easiest way to get framed floats, both single-column and wide
 \RequirePackage[framestyle=fbox,framefit=yes,heightadjust=all,framearound=all,font=sf]{floatrow}
