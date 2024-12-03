@@ -294,9 +294,18 @@ bibencoding=utf8,
     uniquelist=false,
     autopunct=true,
     isbn=false,url=false,doi=false,
+    eprint = false
 ]{biblatex-chicago}
 \RequirePackage[hidelinks]{hyperref}  % Load hyperref after biblatex
-  
+
+  % Display only year for the date field
+  \AtEveryBibitem{%
+    \clearfield{month} % Remove month field
+    \clearfield{day}   % Remove day field
+    %\clearfield{pages} % Remove pages field
+    %\clearfield{pagetotal}
+    \clearfield{series}
+  }
   % Append "[In Korean]" if langid is set to 'korean-han'
   \AtEveryBibitem{%
     \ifboolexpr{
